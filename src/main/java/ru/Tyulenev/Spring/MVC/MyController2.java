@@ -6,32 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/employee")
-public class MyController {
+@RequestMapping("/employee2")
+public class MyController2 {
 
     @RequestMapping("/")
     public String showFirstView() {
-        return "forms1/first-view";
+        return "forms1/first-view-2";
     }
 
     @RequestMapping("/askDetails")
     public String askEmployeeDetailsView(Model model) {
         model.addAttribute("employee", new Employee());
-        return "forms1/ask-emp-details-view";
+        return "forms1/ask-emp-details-view-2";
     }
 
-//    @RequestMapping("/showDetails")
-//    public String showEmployeeDetailsView() {
-//        return "show-emp-details-view";
-//    }
-//    @RequestMapping("/showDetails")
-//    public String showEmployeeDetailsView(HttpServletRequest request, Model model) {
-//        String empName = request.getParameter("employeeName");
-//        empName = "Mr." + empName;
-//        model.addAttribute("nameAttribute", empName);
-////        model.addAttribute("description", "- QSystems programmer");
-//        return "show-emp-details-view";
-//    }
 
         @RequestMapping("/showDetails")
     public String showEmployeeDetailsView(@RequestParam("employeeName")
@@ -40,6 +28,6 @@ public class MyController {
         empName = "Mr." + empName;
         model.addAttribute("nameAttribute", empName);
 //        model.addAttribute("description", "- QSystems programmer");
-        return "forms1/show-emp-details-view";
+        return "forms1/show-emp-details-view-2";
     }
 }
