@@ -11,15 +11,14 @@ public class MyController2 {
 
     @RequestMapping("/")
     public String showFirstView() {
-        return "forms1/first-view-2";
+        return "forms2/first-view-2";
     }
 
     @RequestMapping("/askDetails")
     public String askEmployeeDetailsView(Model model) {
         model.addAttribute("employee", new Employee());
-        return "forms1/ask-emp-details-view-2";
+        return "forms2/ask-emp-details-view-2";
     }
-
 
         @RequestMapping("/showDetails")
     public String showEmployeeDetailsView(@RequestParam("employeeName")
@@ -28,6 +27,6 @@ public class MyController2 {
         empName = "Mr." + empName;
         model.addAttribute("nameAttribute", empName);
 //        model.addAttribute("description", "- QSystems programmer");
-        return "forms1/show-emp-details-view-2";
+        return "forms2/show-emp-details-view-2";
     }
 }
