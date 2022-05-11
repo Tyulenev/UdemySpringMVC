@@ -2,7 +2,7 @@
 <html>
 
 <body>
-<h2>Alll is OK!</h2>
+<h2>All is OK!</h2>
 </body>
 
 </html>
