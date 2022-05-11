@@ -7,7 +7,14 @@
 <br>
 <br>
 
-<form:form action = "showDetails" modelAttribute="">
+<form:form action = "showDetails" modelAttribute="employee">
+    Name <form:input path="name"/>
+    <br>
+    Surname <form:input path="surname"/>
+    <br>
+    salary <form:input path="salary"/>
+    <br>
+    <input type="submit" value="OK">
 
 </form:form>
 
