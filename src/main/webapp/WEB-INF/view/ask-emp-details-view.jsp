@@ -5,7 +5,7 @@
 <h2>Employee, Please Enter your details</h2>
 <br>
 <br>
-<form action = "/showDetails" method="get">
+<form action = "showDetails" method="get">
     <input type="text" name = "employeeName"
     placeholder="Write your name"/>
 
