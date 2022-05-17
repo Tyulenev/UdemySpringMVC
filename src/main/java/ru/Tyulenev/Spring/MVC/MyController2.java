@@ -2,6 +2,7 @@ package ru.Tyulenev.Spring.MVC;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,17 +17,17 @@ public class MyController2 {
 
     @RequestMapping("/askDetails")
     public String askEmployeeDetailsView(Model model) {
-        model.addAttribute("employee", new Employee());
+        Employee emp = new Employee();
+        emp.setName("Ivan");
+        emp.setSurname("Petrov");
+        emp.setSalary(500);
+        model.addAttribute("employee", emp);
         return "forms2/ask-emp-details-view-2";
     }
 
         @RequestMapping("/showDetails")
-    public String showEmployeeDetailsView(@RequestParam("employeeName")
-                                                          String empName,
-                                          Model model) {
-        empName = "Mr." + empName;
-        model.addAttribute("nameAttribute", empName);
-//        model.addAttribute("description", "- QSystems programmer");
+    public String showEmployeeDetailsView(@ModelAttribute("employee") Employee emp) {
+        emp.setName("Mr. " + emp.getName());
         return "forms2/show-emp-details-view-2";
     }
 }
