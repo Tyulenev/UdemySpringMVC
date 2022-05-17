@@ -1,12 +1,32 @@
 package ru.Tyulenev.Spring.MVC;
 
+import javax.swing.plaf.DesktopPaneUI;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private int salary;
     private String department;
+    private Map<String,String> departments;
+
+    public Map<String, String> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Map<String, String> departments) {
+        this.departments = departments;
+    }
+
+
+
 
     public Employee() {
+        departments = new HashMap<>();
+        departments.put("IT", "Information Technologies");
+        departments.put("HR", "Human resources");
+        departments.put("Sales", "Sales");
     }
 
     public String getName() {
