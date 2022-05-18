@@ -1,10 +1,12 @@
 package ru.Tyulenev.Spring.MVC;
 
 import javax.swing.plaf.DesktopPaneUI;
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2, message = "Name must be grater than 2 symbols") //Минимальный размер имени
     private String name;
     private String surname;
     private int salary;
