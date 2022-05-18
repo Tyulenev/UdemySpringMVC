@@ -26,6 +26,13 @@
 <%--    Audi <form:radiobutton path="carBrend" value="Audi"/>--%>
 <%--    Mersedes <form:radiobutton path="carBrend" value="MB"/>--%>
     <form:radiobuttons path="carBrend" items="${employee.carBrends}"/>
+    <br><br>
+    Which foreign lang(s) do you know?
+<%--    EN <form:checkbox path="languages" value="English"/>--%>
+<%--    DE <form:checkbox path="languages" value="Deutch"/>--%>
+<%--    FR <form:checkbox path="languages" value="French"/>--%>
+    <form:checkboxes path="languages" items="${employee.langList}"/>
+    <br>
     <input type="submit" value="OK">
 
 </form:form>
